@@ -1,8 +1,8 @@
 body {
   font-family: 'Poppins';
 }
-/* From Uiverse.io by alexmaracinaru */ 
-button {
+
+.arrow-button {
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s;
@@ -15,20 +15,180 @@ button {
   font-size: 15px;
 }
 
-button:hover {
+.arrow-button:hover {
   background:  #9a7358;
 }
 
-button > svg {
+.arrow-button > svg {
   width: 34px;
   margin-left: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
-button:hover svg {
+.arrow-button:hover svg {
   transform: translateX(5px);
 }
 
-button:active {
+.arrow-button:active {
   transform: scale(0.95);
+}
+
+.shadow-button {
+  align-items: center;
+  background-color: #f8f8f8;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.shadow-button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.shadow-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.shadow-button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.shadow-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .shadow-button {
+    padding: 0 40px;
+  }
+}
+
+/* From Uiverse.io by ryota1231 */ 
+.subscription-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: #000000;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.subscription-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #ffffff;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.subscription-button .arr-1 {
+  right: 16px;
+}
+
+.subscription-button .arr-2 {
+  left: -25%;
+}
+
+.subscription-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.subscription-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.subscription-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #000000;
+  border-radius: 12px;
+}
+
+.subscription-button:hover .arr-1 {
+  right: -25%;
+}
+
+.subscription-button:hover .arr-2 {
+  left: 16px;
+}
+
+.subscription-button:hover .text {
+  transform: translateX(12px);
+}
+
+.subscription-button:hover svg {
+  fill: #000000;
+}
+
+.subscription-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.subscription-button:hover .circle {
+  width: 350px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-scroll {
+  animation: scroll 15s linear infinite;
 }

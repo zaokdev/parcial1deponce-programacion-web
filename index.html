@@ -12,7 +12,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+  <script>
+    const carousel = document.getElementById('carousel');
+    const slides = carousel.children;
+    let currentIndex = 0;
+  
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  
+    // Navegación manual
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+  
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+  
+    // Auto-play: Cambia de slide automáticamente cada 3 segundos
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }, 3000);
+  </script>
+  <style>
+    .outlined-text {
+      /* Color de relleno */
+      -webkit-text-fill-color: #EBA182; 
+      /* Grosor y color del contorno */
+      -webkit-text-stroke: 2px #000;    
+    }
+  </style>
   <title>La taza</title>
 </head>
 
@@ -25,7 +58,7 @@
   <!-- Navbar -->
   <nav class="bg-blue-600 flex width-100 p-6 items-center justify-center w-full space-x-10">
     <a href="productos.html" class="flex items-center w-full justify-center">
-      <h1 class="text-1xl font-bold text-white font-poppins">Productos</h1>
+      <h1 class="text-1xl font-bold text-white font-poppins">Productos Favoritos</h1>
     </a>
     <a href="" class="flex items-center w-full justify-center">
       <h1 class="text1x1 font-bold text-white font-poppins">Contactanos</h1>
@@ -58,7 +91,7 @@
         <span class="ml-8">desde la semilla</span><br>
         <span class="ml-16">hasta la taza</span><br>
       </h1>
-      <button>
+      <button class="arrow-button">
         <span class="text-stroke-2">Comprar Café</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -102,14 +135,176 @@
   <div class="flex items-center justify-center p-15 border-t-1 border-b-1 border-black">
     <h1 class="text-5xl font-bold">Los favoritos para tu taza</h1>
   </div>
-  <section class="flex items-center justify-center width-100">
-    <div class="flex items-center justify-center">
-      <img src="images/tasters-choice.webp" alt="Taster's Choice" class="w-1/4 border-1">
-      <div class="flex flex-col items-center justify-center">
-        <h1>Nescafé Taster's Choice Gourmet Roast</h1>
-        <p>medio-afrutado-media</p>
+  
+  <section class="flex items-center items-stretch justify-center width-100">
+    <!-- Nescafé Taster's Choice Gourmet Roast -->
+    <div class="flex flex-col items-center justify-center border-1 max-w-1/4 text-center">
+      <div class="bg-[#A9AE36] flex items-center justify-center w-full">
+        <img src="images/tasters-choice.png" alt="Taster's Choice" class="w-1/2">
       </div>
+      <div class="flex-1 text-center">
+        <br>
+        <h1 class="font-bold text-2xl">Nescafé Taster's Choice Gourmet Roast</h1>
+        <br>
+        <p class="font-light italic">afrutadas-duranzo</p>
+        <br>
+        <p class="font-light text-sm">MOLIENDA MEDIA</p>
+      </div>
+      <img src="images/4-star-rating.png" alt="5 Star Rating" class="w-1/4">
+      <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
+    </div>
+
+    <!-- Juan Valdez Sierra Nevada -->
+    <div class="flex flex-col items-center justify-center border-1 max-w-1/4 text-center">
+      <div class="bg-[#A893DE] flex items-center justify-center w-full">
+        <img src="images/juan-valdez-sierra-nevada.png" alt="Juan Valdez Sierra Nevada" class="w-1/2">
+      </div>
+      <div class="flex-1 text-center">
+        <br>
+        <h1 class="font-bold text-2xl">Juan Valdez Sierra Nevada</h1>
+        <br>
+        <p class="font-light italic">chocolate negro-caramelo-nuez tostada</p>
+        <br>
+        <p class="font-light text-sm">MOLIENDA MEDIA</p>
+      </div>
+      <img src="images/5-star-rating.png" alt="5 Star Rating" class="w-1/4">
+      <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
+    </div>
+    <!-- Café Garat -->
+    <div class="flex flex-col items-center justify-center border-1 max-w-1/4 text-center">
+      <div class="bg-[#A1CAF1] flex items-center justify-center w-full">
+        <img src="images/café-garat-molido.png" alt="Café Garat Gourmet" class="w-1/2">
+      </div>
+      <div class="flex-1 text-center">
+        <br>
+        <h1 class="font-bold text-2xl">Café Garat Gourmet</h1>
+        <br>
+        <p class="font-light italic">chocolate-caramelo</p>
+        <br>
+        <p class="font-light text-sm">MOLIENDA MEDIA</p>
+      </div>
+      <img src="images/5-star-rating.png" alt="5 Star Rating" class="w-1/4">
+      <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
+    </div>
+    <!-- Café Garat Avellana-->
+    <div class="flex flex-col items-center justify-center border-1 max-w-1/4 text-center">
+      <div class="bg-[#D8C3B1] flex items-center justify-center w-full">
+        <img src="images/garat-avellana.png" alt="Café Garat Avellana" class="w-1/2">
+      </div>
+      <div class="flex-1 text-center">
+        <br>
+        <h1 class="font-bold text-2xl">Café Garat Avellana</h1>
+        <br>
+        <p class="font-light italic">avellana</p>
+        <br>
+        <p class="font-light text-sm">MOLIENDA MEDIA</p>
+      </div>
+      <img src="images/5-star-rating.png" alt="5 Star Rating" class="w-1/4">
+      <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
     </div>
   </section>
+
+  <!-- Seccion de la subscripcion -->
+  <section class="bg-[#FBC8B3] grid grid-cols-2 w-full divide-x-1 divide-black">
+    
+    <!-- Primera Division -->
+    <div class="flex flex-col items-center justify-bottom pt-10 pr-10 pl-10 ">
+      <h1 class="text-center text-5xl font-bold mt-20">Subscribete & ahorra</h1>
+      <p class="text-center mt-6">
+        El café de más alta calidad por parte de nuestra red local de productores,
+        tostado a la perfección y enviado directo a tu casa en cualquier horario
+      </p>
+      <div class="flex flex-col w-3/4 mt-10">
+        <ul class="flex flex-col space-y-5">
+          <li class="font-bold flex gap-10 items-center"><span class="outlined-text text-3xl">01</span>Escoge tu café</li>
+          <hr class="bg-black w-full mt-2">
+          <li class="font-bold flex gap-8 items-center"><span class="outlined-text text-3xl">02</span>Selecciona la frecuencia de envío</li>
+          <hr class="bg-black w-full mt-2">
+          <li class="font-bold flex gap-7 items-center"><span class="outlined-text text-3xl">03</span>Disfruta!</li>
+        </ul>
+      </div>
+
+      <button class="subscription-button mt-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">EMPEZAR UNA SUBSCRIPCION</span>
+        <span class="circle"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+      <hr class="bg-black w-full mt-15">
+      <!-- Carrusel -->
+      <div class="relative w-full max-w-3xl overflow-hidden">
+        <div class="flex animate-scroll">
+          <!-- Slides -->
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/coffee-beans-drawing.webp" alt="Coffee Beans Drawing" class="w-1/4">
+            <p class="text-1xl w-full">Cambia tu café cuando sea</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/calendar.png" alt="Calendar" class="w-1/4">
+            <p class="text-1xl">Cambia el tiempo y fechas de envío</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/x.png" alt="X Mark" class="w-1/4">
+            <p class="text-1xl">Cancela en cualquier momento</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/truck.png" alt="Truck" class="w-1/4">
+            <p class="text-1xl">Envio gratis arriba de 600 MXN</p>
+          </div>
+          <!-- Slides Repetidas-->
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/coffee-beans-drawing.webp" alt="Coffee Beans Drawing" class="w-1/4">
+            <p class="text-1xl w-full">Cambia tu café cuando sea</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/calendar.png" alt="Calendar" class="w-1/4">
+            <p class="text-1xl">Cambia el tiempo y fechas de envío</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/x.png" alt="X Mark" class="w-1/4">
+            <p class="text-1xl">Cancela en cualquier momento</p>
+          </div>
+          <div class="flex-shrink-0 flex items-center gap-4 p-10 w-80">
+            <img src="images/truck.png" alt="Truck" class="w-1/4">
+            <p class="text-1xl">Envio gratis arriba de 600 MXN</p>
+          </div>
+        </div>
+      </div>
+
+</div>
+    </div>
+    <!-- Segunda Division -->
+    <div class="flex flex-col items-center p-10 justify-center">
+      <img src="images/coffee-boxing.webp" alt="Coffee Boxing" class="w-3/4 h-100 object-cover object-center">
+      <p class="self-start mt-5 font-light text-left uppercase">Dos bolsas de 340 gramos Counter Culture</p>
+      <h3 class="self-start mt-4 font-bold text-left text-3xl">Subscripcion de Counter Culture - Dos Bolsas</h3>
+      <hr class="bg-black w-full mt-5">
+      <p class="mt-5 font-light">Acompáñanos en una experiencia que destaca la naturaleza estacional del café. Disfruta de una variedad cambiante de cafés escogidos con esmero de parte de nuestros productores de confianza.</p>
+      <hr class="bg-black w-full mt-5">
+      <button class="subscription-button mt-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+        <span class="text">SUBSCRIBIRSE AHORA</span>
+        <span class="circle"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+          <path
+            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+  
 </body>
 </html>
