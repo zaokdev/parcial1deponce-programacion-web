@@ -57,10 +57,10 @@
   </div>
   <!-- Navbar -->
   <nav class="bg-blue-600 flex width-100 p-6 items-center justify-center w-full space-x-10">
-    <a href="productos.html" class="flex items-center w-full justify-center">
+    <a href="#favorites-section" class="flex items-center w-full justify-center">
       <h1 class="text-1xl font-bold text-white font-poppins">Productos Favoritos</h1>
     </a>
-    <a href="" class="flex items-center w-full justify-center">
+    <a href="#contact" class="flex items-center w-full justify-center">
       <h1 class="text1x1 font-bold text-white font-poppins">Contactanos</h1>
     </a>
     <a href="index.html" class="flex items-center justify-center w-full space-x-5">
@@ -70,8 +70,8 @@
     <a href="about.html" class="flex items-center w-full justify-center">
       <h1 class="text-1xl font-bold text-white font-poppins">Nosotros</h1>
     </a>
-    <a href="about.html" class="flex items-center w-full justify-center">
-      <h1 class="text-1xl font-bold text-white font-poppins">Aprende</h1>
+    <a href="#subscription" class="flex items-center w-full justify-center">
+      <h1 class="text-1xl font-bold text-white font-poppins">Subscripciones</h1>
     </a>
   </nav>
   
@@ -132,7 +132,7 @@
   </section>
 
   <!-- Seccion de favoritos -->
-  <div class="flex items-center justify-center p-15 border-t-1 border-b-1 border-black">
+  <div class="flex items-center justify-center p-15 border-t-1 border-b-1 border-black" id="favorites-section">
     <h1 class="text-5xl font-bold">Los favoritos para tu taza</h1>
   </div>
   
@@ -205,11 +205,11 @@
   </section>
 
   <!-- Seccion de la subscripcion -->
-  <section class="bg-[#FBC8B3] grid grid-cols-2 w-full divide-x-1 divide-black">
+  <section class="bg-[#FBC8B3] grid grid-cols-2 w-full divide-x-1 divide-black" id="subscription">
     
     <!-- Primera Division -->
     <div class="flex flex-col items-center justify-bottom pt-10 pr-10 pl-10 ">
-      <h1 class="text-center text-5xl font-bold mt-20">Subscribete & ahorra</h1>
+      <h1 class="text-center text-5xl font-bold mt-20">Suscribete & ahorra</h1>
       <p class="text-center mt-6">
         El café de más alta calidad por parte de nuestra red local de productores,
         tostado a la perfección y enviado directo a tu casa en cualquier horario
@@ -279,13 +279,14 @@
         </div>
       </div>
 
-</div>
+      </div>
     </div>
+
     <!-- Segunda Division -->
     <div class="flex flex-col items-center p-10 justify-center">
       <img src="images/coffee-boxing.webp" alt="Coffee Boxing" class="w-3/4 h-100 object-cover object-center">
       <p class="self-start mt-5 font-light text-left uppercase">Dos bolsas de 340 gramos Counter Culture</p>
-      <h3 class="self-start mt-4 font-bold text-left text-3xl">Subscripcion de Counter Culture - Dos Bolsas</h3>
+      <h3 class="self-start mt-4 font-bold text-left text-3xl">Subscripción de Counter Culture - Dos Bolsas</h3>
       <hr class="bg-black w-full mt-5">
       <p class="mt-5 font-light">Acompáñanos en una experiencia que destaca la naturaleza estacional del café. Disfruta de una variedad cambiante de cafés escogidos con esmero de parte de nuestros productores de confianza.</p>
       <hr class="bg-black w-full mt-5">
@@ -305,6 +306,62 @@
       </button>
     </div>
   </section>
+  <!-- Footer -->
+  <footer class="bg-[#000F8F] width-full p-8 pl-20 pr-20">
+    <h1 class="font-bold text-white text-center text-2xl w-full">LA TAZA</h1>
+    <div class="flex flex-wrap items-start width-full">
+      <div class="text-white items-center justify-start w-1/4 mr-30">
+        <h2 class="font-bold text-4xl">Interesado para más?</h2>
+        <p class="font-extralight mt-2 text-xs antialiased">Obten una vista anticipada de los nuevos elementos del menú, invitaciones a las próximas clases y promociones en tus productos favoritos.</p>
+        <form method="post">
+          <input type="text" id="email" name="email" placeholder="Ingresa tu correo" class="mt-4 p-3 w-full border-1 rounded-full placeholder-white placeholder:font-extralight placeholder:text-sm">
+          <button class="email-button mt-2">SUSCRIBIRSE</button>
+        </form>
+        <div class="flex items-center w-1/4 mt-15 space-x-5">
+          <img src="images/instagram-logo.webp" alt="Instagram Logo" class="w-11">
+          <img src="images/facebook-logo.webp" alt="Facebook" class="w-11">
+          <img src="images/twitter-logo.webp" alt="Twitter Logo" class="w-11">
+          <img src="images/youtube-logo.webp" alt="Youtube Logo" class="w-11">
+        </div>
+      </div>
+  
+      <div class="grid grid-cols-4 text-white space-x-15 mt-15">
+        <div class="flex flex-col">
+          <span class="font-bold mb-2">TIENDA</span>
+          <a href="">Café</a>
+          <a href="">Subscripciones</a>
+          <a href="">Subscripciones Regaladas</a>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold mb-2">NOSOTROS</span>
+          <a href="">Nosotros</a>
+          <a href="">Blog</a>
+          <a href="">Centros de Entrenamiento</a>
+          <a href="">Reportes de Transparencia</a>
+          <a href="">Carreras</a>
+          <a href="">Eventos</a>
+        </div>
+        <div class="flex flex-col" id="contact">
+          <span class="font-bold mb-2">CONTACTANOS</span>
+          <a href="">+52 9986537586</a>
+          <a href="">mail@lataza.com</a>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold mb-2">MAYOREO</span>
+          <a href="">Login Empresas</a>
+          <a href="">Regalos Corporativos</a>
+          <a href="">Convertirse en Socio</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center mt-10 text-white">
+      <ul class="flex font-extralight">
+        <li class="border-r border-white px-4">Politicas de Privacidad</li>
+        <li class="border-r border-white px-4">Terminos y Condiciones</li>
+        <li class="px-4">© La Taza 2025</li>
+      </ul>
+    </div>
+  </footer>
   
 </body>
 </html>
