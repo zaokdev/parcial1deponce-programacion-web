@@ -64,7 +64,7 @@
 
   
   <!-- Primera seccion -->
-  <section class="bg-[#F59372] flex xl:flex-wrap width-100 justify-left items-center p-40 overflow-hidden relative">
+  <section class="flex relative items-center justify-center border py-24 bg-[#F59372]">
     <video
       class="hidden lg:block w-2xl h-[400px] rounded-tr-[400px] overflow-hidden"
       autoplay
@@ -73,11 +73,11 @@
     >
     <source src="videos/cofffee-making.mp4" type="video/mp4"/>
     </video>
-    <div class="flex flex-col space-y-10 items-center justify-center">
-      <h1 class="text-7xl font-bold font-poppins leading-tight text-center">
+    <div class="flex flex-col items-center text-center">
+      <h1 class="text-center text-7xl font-bold font-poppins leading-tight mt-8">
         Un café confiable,<br>
-        <span class="ml-8">desde la semilla</span><br>
-        <span class="ml-16">hasta la taza</span><br>
+        desde la semilla<br>
+        <br>
       </h1>
       <button class="arrow-button">
         <span class="text-stroke-2">Comprar Café</span>
@@ -96,24 +96,27 @@
         </svg>
       </button>
     </div>
-    <img src="images/coffee-splitter.png" alt="coffee-splitter" class="flex absolute bottom-0 -right-20 w-2xl lg:block hidden">
+    <img src="images/coffee-splitter.png" alt="coffee-splitter" class="flex absolute bottom-0 xl:-right-40 w-2xl xl:block hidden opacity-25">
+
   </section>
 
+
+
   <!-- Seccion de avisos -->
-  <section class="bg-[#F3F1EB] flex items-center justify-center width-100">
-    <div class="width-25 justify-left items-center flex flex-row gap-4 p-10">
+  <section class="bg-[#F3F1EB] w-full grid grid-cols-12">
+    <div class="col-span-6 flex items-center md:col-span-3 gap-3">
       <img src="images/coffee-plant.avif" alt="Coffee Plant" class="w-1/4">
       <p class="text-1xl">Fuentes sustentables</p>
     </div>
-    <div class="width-25 justify-left items-center flex flex-row gap-4">
+    <div class="col-span-6 flex items-center md:col-span-3 gap-3">
       <img src="images/coffee-spoon.avif" alt="Coffee Spoon" class="w-1/4">
       <p>Calidad de producto</p>
     </div>
-    <div class="width-25 justify-left items-center flex flex-row gap-4">
+    <div class="col-span-6 flex items-center md:col-span-3 gap-3">
       <img src="images/b-corp-logo.avif" alt="B Corp Logo" class="w-1/4">
       <p>Empresa certificada</p>
     </div>
-    <div class="width-25 justify-left items-center flex flex-row gap-4">
+    <div class="col-span-6 flex items-center md:col-span-3 gap-3">
       <img src="images/coffee-bag.avif" alt="Coffee Bag" class="w-1/4">
       <p>Empaque biodegradable</p>
     </div>
@@ -121,11 +124,13 @@
 
   <!-- Seccion de favoritos -->
   <div class="flex items-center justify-center p-15 border-t-1 border-b-1 border-black" id="favorites-section">
-    <h1 class="text-5xl font-bold">Los favoritos para tu taza</h1>
+    <h1 class="text-5xl font-bold text-center">Los favoritos para tu taza</h1>
   </div>
+
+
   <section class="grid lg:grid-cols-4 grid-cols-2  items-center items-stretch justify-center width-100">
     <!-- Nescafé Taster's Choice Gourmet Roast -->
-    <div class="flex flex-col items-center justify-center border-1 w-full text-center">
+    <div class="flex flex-col items-center justify-center border-1 w-full text-center col-span-2 lg:col-span-1">
       <div class="bg-[#A9AE36] flex items-center justify-center w-full">
         <img src="images/tasters-choice.png" alt="Taster's Choice" class="w-1/2">
       </div>
@@ -142,7 +147,7 @@
     </div>
 
     <!-- Juan Valdez Sierra Nevada -->
-    <div class="flex flex-col items-center justify-center border-1 w-full text-center">
+    <div class="flex flex-col items-center justify-center border-1 w-full text-center col-span-2 lg:col-span-1">
       <div class="bg-[#A893DE] flex items-center justify-center w-full">
         <img src="images/juan-valdez-sierra-nevada.png" alt="Juan Valdez Sierra Nevada" class="w-1/2">
       </div>
@@ -158,7 +163,7 @@
       <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
     </div>
     <!-- Café Garat -->
-    <div class="flex flex-col items-center justify-center border-1 w-full text-center">
+    <div class="flex flex-col items-center justify-center border-1 w-full text-center col-span-2 lg:col-span-1">
       <div class="bg-[#A1CAF1] flex items-center justify-center w-full">
         <img src="images/café-garat-molido.png" alt="Café Garat Gourmet" class="w-1/2">
       </div>
@@ -174,7 +179,7 @@
       <button class="shadow-button mb-8 font-bold" role="button">COMPRAR</button>
     </div>
     <!-- Café Garat Avellana-->
-    <div class="flex flex-col items-center justify-center border-1 w-full text-center">
+    <div class="flex flex-col items-center justify-center border-1 w-full text-center col-span-2 lg:col-span-1">
       <div class="bg-[#D8C3B1] flex items-center justify-center w-full">
         <img src="images/garat-avellana.png" alt="Café Garat Avellana" class="w-1/2">
       </div>
@@ -195,7 +200,7 @@
   <section class="bg-[#FBC8B3] grid grid-cols-2 w-full divide-x-1 divide-black" id="subscription">
     
     <!-- Primera Division -->
-    <div class="flex flex-col items-center justify-bottom pt-10 pr-10 pl-10 ">
+    <div class="flex flex-col items-center justify-bottom pt-10 pr-10 pl-10 col-span-2 lg:col-span-1">
       <h1 class="text-center text-5xl font-bold mt-20">Suscribete & ahorra</h1>
       <p class="text-center mt-6">
         El café de más alta calidad por parte de nuestra red local de productores,
@@ -270,7 +275,7 @@
     </div>
 
     <!-- Segunda Division -->
-    <div class="flex flex-col items-center p-10 justify-center">
+    <div class="flex flex-col items-center p-10 justify-center col-span-2 lg:col-span-1">
       <img src="images/coffee-boxing.webp" alt="Coffee Boxing" class="w-3/4 h-100 object-cover object-center">
       <p class="self-start mt-5 font-light text-left uppercase">Dos bolsas de 340 gramos Counter Culture</p>
       <h3 class="self-start mt-4 font-bold text-left text-3xl overflow-hidden">Subscripción de Counter Culture - Dos Bolsas</h3>

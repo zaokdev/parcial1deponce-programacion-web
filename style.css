@@ -15,11 +15,13 @@ body {
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 1rem;
+  z-index: 20;
 }
 
 .arrow-button:hover {
   background:  #9a7358;
+  cursor: pointer;
 }
 
 .arrow-button > svg {
